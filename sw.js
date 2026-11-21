@@ -1,7 +1,7 @@
 /* Station QR Codes service worker.
    Bump SHELL_CACHE when index/css/js/manifest/icons/data change.
    Bump QR_CACHE only when QR image files themselves change in a breaking way. */
-var SHELL_CACHE = 'station-qr-shell-v1';
+var SHELL_CACHE = 'station-qr-shell-v2';
 var QR_CACHE = 'station-qr-images-v1';
 var PRECACHE = [
   './',

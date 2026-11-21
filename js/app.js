@@ -324,11 +324,14 @@ document.addEventListener('keydown',function(e){if(M.hidden)return;if(e.key==='E
     }
   });
   var refreshing=false;
-  navigator.serviceWorker.addEventListener('controllerchange',function(){
-    if(refreshing)return;
-    refreshing=true;
-    location.reload();
-  });
+  // Reload only when an updated worker takes control, not on the first clients.claim().
+  if(navigator.serviceWorker.controller){
+    navigator.serviceWorker.addEventListener('controllerchange',function(){
+      if(refreshing)return;
+      refreshing=true;
+      location.reload();
+    });
+  }
   navigator.serviceWorker.register('sw.js',{scope:'./'}).then(function(reg){
     if(reg.waiting && navigator.serviceWorker.controller) showUpdate(reg);
     reg.addEventListener('updatefound',function(){
