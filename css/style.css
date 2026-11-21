@@ -48,3 +48,28 @@ h1{font-size:1.6rem;margin:.2em 0}
 .foot a{color:#ffd28a}
 .foot p{margin:.3em 0}
 @media(max-width:520px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}h1{font-size:1.35rem}}
+.hdr-actions{display:flex;align-items:center;gap:8px}
+.btn.inst{background:var(--brand);color:#1c2233;font-weight:700;white-space:nowrap}
+.net-pill{background:#1c2233;color:#fff;border-radius:999px;padding:5px 11px;font-size:.8rem;font-weight:600}
+.banner{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 16px;background:#fff7e6;color:var(--ink);border-bottom:1px solid #f3d9a0;font-size:.92rem}
+.banner p{margin:0;flex:1}
+.banner.upd{background:#eef0ff;border-bottom-color:#c7c9f3}
+.banner[hidden]{display:none}
+.banner-x{border:0;background:none;font-size:1.6rem;cursor:pointer;line-height:1;color:var(--ink);padding:0 4px}
+.offline-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.offline-panel p{margin:2px 0 0}
+.badge-off{display:inline-block;background:#e7f7ec;color:#14633a;border-radius:999px;padding:2px 8px;font-size:.75rem;font-weight:700}
+.badge-off.partial{background:#eef0ff;color:var(--brand2)}
+.scard .badge-off{margin-top:8px}
+.state-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
+.dl-bar{position:sticky;bottom:0;z-index:25;background:#fff;border-top:1px solid var(--line);padding:10px 16px 14px;box-shadow:0 -4px 16px rgba(0,0,0,.06)}
+.dl-bar[hidden]{display:none}
+.dl-row{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:8px}
+.dl-meta{font-size:.92rem;font-weight:600}
+.progress{height:8px;background:#e5e7eb;border-radius:999px;overflow:hidden}
+.progress>div{height:100%;background:var(--brand2);width:0;transition:width .2s}
+@media(max-width:520px){
+  .top-in{align-items:stretch}
+  .search-box{flex:1 1 100%;max-width:none}
+  .hdr-actions{margin-left:auto}
+}
